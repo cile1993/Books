@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Auth::routes();
+
+Route::get('/', [App\Http\Controllers\ImportController::class, 'index'])->name('index');
+Route::get('/books', [App\Http\Controllers\ImportController::class, 'getBooks'])->name('list');
+Route::post('import-excel-csv-file', [App\Http\Controllers\ImportController::class, 'importExcelCSV'])->name('import');
+Route::get('/logout', [App\Http\Controllers\LogoutController::class, 'logout'])->name('logout');
+

@@ -17,3 +17,15 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+/*
+  |-------------------------------------------------------------------------------
+  | Get An Individual Or Multiple Books
+  |-------------------------------------------------------------------------------
+  | URL:            /api/books/{id}
+  | Controller:     API\BookController@getBook
+  | Method:         GET
+  | Description:    Gets an book data
+  */
+
+Route::get('/books/{id}', 'App\Http\Controllers\Api\BooksController@getBooks');
