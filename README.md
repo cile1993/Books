@@ -2,6 +2,7 @@
  Mini app for books importing
 
 # Demo accounts:
+admin
 
 admin@gmail.com
 password
