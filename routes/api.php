@@ -28,4 +28,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
   | Description:    Gets an book data
   */
 
-Route::get('/books/{id}', 'App\Http\Controllers\Api\BooksController@getBooks');
+Route::get('/books/{ids}', 'App\Http\Controllers\Api\BooksController@getBooks');
