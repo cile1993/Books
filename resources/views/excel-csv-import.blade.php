@@ -101,7 +101,7 @@
 					columnDefs        : [
 						{
 							'searchable'    : false,
-							'targets'       : [1,2]
+							'targets'       : [2,3]
 						},
 							],
 					columns: [
